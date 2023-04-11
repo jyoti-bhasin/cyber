@@ -1,0 +1,15 @@
+import hashlib
+import rsa
+string_info= "hello world"
+hashed_string= hashlib.sha256(string_info.encode('utf-8')).hexdigest()
+public_k, private_k=3,5
+encMessage = rsa.encrypt(hashed_string.encode(),public_k)
+print("encrypted string: ", encMessage)
+hash_and_message= string_info+hashed_string
+ 
+
+
+
+
+
+
